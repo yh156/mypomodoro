@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
 });
 
 	var idle_timer = $("#timer");
-	idle_timer.data("timer", 10);
+	idle_timer.data("timer", 1500);
 	idle_timer.TimeCircles({
 		start: false,
 		count_past_zero: false,
@@ -33,7 +33,9 @@ jQuery(document).ready(function ($) {
 	}).addListener(
     	function(unit,value,total) { 
 
-    		if(value == 0)
+    		$("title").html("My Pomodoro - " + Math.floor(total/60));
+
+    		if(total == 0)
     			$.ionSound.play("bell_ring");
 
 	        $("#timer-sbreak").click(function(){ 
@@ -92,8 +94,25 @@ function setup(p_start){
 		}
 	}).addListener(
     	function(unit,value,total) { 
+
+    		$("title").html("My Pomodoro - " + Math.floor(total/60));
+
+	        if(total == 0)
+    			$.ionSound.play("bell_ring");
+
 	        $("#timer-sbreak").click(function(){ 
-				timer.data("timer", 300);
+				idle_timer.data("timer", 300);
+				idle_timer.TimeCircles().destroy();
+				setup(true);
+			});
+			$("#timer-lbreak").click(function(){ 
+				idle_timer.data("timer", 1200);
+				idle_timer.TimeCircles().destroy();
+				setup(true);
+			});
+			$("#timer-pomodoro").click(function(){ 
+				idle_timer.data("timer", 1500);
+				idle_timer.TimeCircles().destroy();
 				setup(true);
 			});
     });

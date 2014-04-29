@@ -9,7 +9,8 @@
 		<title>My Pomodoro</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="My Pomodoro, a simple pomodoro timer" />
-		<meta name="keywords" content="" />
+		<meta name="keywords" content="pomodoro, pomodori, timer, project, time, work" />
+		<link rel="icon" type="image/png" href="images/tomato.ico" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
@@ -29,8 +30,19 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<script type="text/javascript">
+	  		var _gaq = _gaq || [];
+	  		_gaq.push(['_setAccount', 'UA-50409067-1']);
+		  	_gaq.push(['_trackPageview']);
+			  (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+		</script>
 	</head>
 	<body class="index loading">
+		<div id="fb-root"></div>
 	
 		<!-- Header -->
 			<header id="header" class="alt">
@@ -41,10 +53,8 @@
 						<li class="submenu">
 							<a href="">Pomodoro</a>
 							<ul>
-								<li><a href="#main">Learn More</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
-								<li><a href="contact.html">Contact</a></li>								
+								<li><a href="#main">Start Working</a></li>
+								<li><a href="#more">Learn More</a></li>							
 							</ul>
 						</li>
 					</ul>
@@ -70,7 +80,7 @@
 					<footer>
 						<ul class="buttons vertical">
 							<li><a href="#main" class="button special fit scrolly">Start Working</a></li>
-							<li><a href="#main" class="button fit scrolly">Learn More</a></li>							
+							<li><a href="#more" class="button fit scrolly">Learn More</a></li>							
 						</ul>
 					</footer>
 				
@@ -91,7 +101,9 @@
 						<li class="hoverable" id="timer-stop"><a class="button">Stop</a></li>
 						<li class="hoverable" id="timer-restart"><a class="button">Restart</a></li>							
 					</ul>
-					<div id="timer" class="wrapper style1 container special"></div>
+					<div class="inner">
+						<div id="timer" class="wrapper style1 container special"></div>
+					</div>
 					<ul class="buttons horizontal">
 						<li class="hoverable" id="timer-pomodoro"><a class="button special">Pomodoro</a></li>
 						<li class="hoverable" id="timer-sbreak"><a class="button special">Short break</a></li>
@@ -101,33 +113,88 @@
 				
 					
 				<!-- One -->
-					<section class="wrapper style2 container special-alt">
+					<section id="more" class="wrapper style2 container special-alt">
 						<div class="row half">
 							<div class="8u">
 							
 								<header>
-									<h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
+									<h2><strong>The Pomodoro technique</strong> is a simple time management technique.</h2>
 								</header>
-								<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
-								<footer>
-									<ul class="buttons">
-										<li><a href="#" class="button">Find Out More</a></li>
-									</ul>
-								</footer>
-							
 							</div>
-							<div class="4u skel-cell-important">
-							
-								<ul class="feature-icons">
-									<li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
-									<li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-									<li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-									<li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
-									<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
-									<li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
+							<div class="4u">
+								<img src="images/logo.png">
+							</div>
+							<div class="row">
+								<div class="4u">
+								
+									<section>
+										<span class="icon feature fa-check"></span>
+										<header>
+											<h3>1. Choose a task you'd like to get done.</h3>
+										</header>
+									</section>
+								
+								</div>
+
+								<div class="4u">
+								
+									<section>
+										<span class="icon feature fa-check"></span>
+										<header>
+											<h3>2. Set the pomodoro timer for 25 minutes.</h3>
+										</header>
+									</section>
+								
+								</div>
+								<div class="4u">
+								
+									<section>
+										<span class="icon feature fa-check"></span>
+										<header>
+											<h3>3. Work on the task until the pomodoro rings.</h3>
+										</header>
+									</section>
+								
+								</div>
+							</div>
+							<div class="row">
+								<div class="4u">
+								
+									<section>
+										<span class="icon feature fa-check"></span>
+										<header>
+											<h3>4. When the pomodoro rings, put a checkmark on a paper.</h3>
+										</header>
+									</section>
+								
+								</div>
+
+								<div class="4u">
+								
+									<section>
+										<span class="icon feature fa-check"></span>
+										<header>
+											<h3>5. Take a short break.</h3>
+										</header>
+									</section>
+								
+								</div>
+								<div class="4u">
+								
+									<section>
+										<span class="icon feature fa-check"></span>
+										<header>
+											<h3>6. Every 4 pomodoros, take a longer break.</h3>
+										</header>
+									</section>
+								
+								</div>
+							</div>
+							<footer>
+								<ul class="buttons">
+									<li><a target="_blank" href="http://pomodorotechnique.com/get-started/" class="button">Find Out More</a></li>
 								</ul>
-							
-							</div>				
+							</footer>
 						</div>
 					</section>
 			</article>
@@ -135,11 +202,7 @@
 			<footer id="footer">
 			
 				<ul class="icons">
-					<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-					<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="https://twitter.com/onlinePomodoro" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
 				</ul>
 				
 				<span class="copyright">&copy; Yohann Haution. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
